@@ -1,0 +1,12 @@
+GETTING STARTED WITH C 
+
+- Not much to say about this chapter
+- There's a decent reference section on poratbility problems 
+
+
+
+Language Specific
+
+- puts will return a EOF on error and a nonnegative on success (although you should just see your message if puts was successful)
+
+- printf will return the number of characters successfully printed (excluding null byte character) or will return a negative value if there is an error. 

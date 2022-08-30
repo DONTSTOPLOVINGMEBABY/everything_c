@@ -1,0 +1,87 @@
+* OBJECTS, FUNCTIONS, AND TYPES */
+*********************************/
+
+
+- Every type in C is either an object type or a function type
+- Pointers are types in C 
+- Each object has a storage duration: The time during program execution for which the object exists, has storage, has a constant address, and retains its last-stored value. 
+
+
+
+
+
+
+4 Types of Scope in C
+----------------------
+
+	1. File Scope -- If the identifier is not within the parameter list or block of a function, then the object's scope is the entire text file in which it appears as well as any files included after that point. 
+
+	2. Block Scope -- If the declaration appears within the paramter list or inside the block (which means the identifier is only available locally within that block). 
+
+	
+	3. Function prototype scope -- Begins and ends within the function declarator.  
+
+	
+	4. Scopes can be nested with inner and outer scopes. The inner scope has access the outer scope but not vice versa.  
+
+
+
+
+4 Types of Storage Duration for Objects in C
+--------------------------------------------
+
+	1. Automatic -- These objects are declared within a block or as a function parameter. They enter into memory when the block in which they're declared begins execution, and ends when execution of that block ends. If the block is entered recursively, a new object is created each time, each with its own storage. 
+
+	2. Static Storage -- These objects are declared in file scope. Their lifetime is the entire execution of the program and their stored value is initialized prior to startup. A variable within a block canhave static storage duration by declaring it with the static specifier. Objects with the static identifier will be around even after that function has exited. 
+
+	
+	3. Thread Storage -- not covered by this book ;( 
+
+
+	4. Allocated Storage -- Deals with dynamically allocated memory (discussed in chapter six ;)) 
+
+
+
+Object Types in C (specifically Boolean, character, and numerical types: both integer and floating)
+---------------------------------------------------------------------------------------------------
+
+	1. _Bool - These types can only have a 0 or 1. If the header <stdbool.h> is included, you can just define the type with the keyword bool. 
+
+	
+	2. char, signed char, unsigned char -- All 3 are character types and will have the same alignment, size, range, representation, and behavior defined by the compiler. Char is not compatible with signed/unsigned char. The char type is used to represent character data. You can use signed char and unsigned char to represent small unsigned values. The wchar_t type can be used to represent characters from a wider array of languages/character sets.  
+
+	
+	3. Numerical -- Used to represent integers, enumerators, and floating point values. 
+
+		a. Signed integer types can be used to represent negative numbers, positive numbers, and zero. Signed types include: signed char, short int, int, long int, and long long int. For every signed integer type, there is an unsigned integer type that allows for one more significant bit worth of storage. The types are ordered by width, which means that wider types are at least as large as narrower types so an integer of type long long int can represent all values that long int can. The int type typically has the natural size suggested by the architecture (16 bits, 32 bits, 64 bits, etc). 
+
+
+		b. Enumeration or enum -- Allows you to define a type that assigns names (enumerators) to integer values in cases with an enumerable set of constant values. If a value isn't initially assigned to the first, then the value is 0 and each subsequent one is enumed by 1. You can use the = operator to assign enumeration constants with duplicate values. Be careful! 
+
+			- enum day { sun, mon, tue, wed, thu, fri, sat } ; 
+			- enum cardinal_points { north = 0, east = 90, south = 180, west = 270} ; 
+			- enum months = { jan = 1, feb, mar, apr, may, jun, jul, aug, sep, oct, nov, dec } ; 
+
+
+		c. float, double, long double -- All of these are floating point. The C language suports the IEEE standard for floating point arithmetic on most systems. 
+
+
+
+Definitions
+-----------
+
+- An object is "storage in which you can represent values"
+	- Another definition: "A region of data storage in the execution environment, the contents of which can represent values... When referenced, an object can be interpreted as having a particular type"
+
+- Address - "A location in memory where an object is stored"
+
+- Automation Storage Duation -- "[Objects] exist until execution leaves the [code] block in which they're defined. 
+
+- Parameters - "Objects declared as part of the function declaration that acquire a value on entry to the function"
+
+- Arguments - "Comma separated expressions you include in the function call expression"
+
+- Pass-by-value language - "When you provide an argument to a function, the value of that argument is copied into a distinct variable for use within the function"i
+
+- Alignment - Represents the number of bytes between successive addresses at which a given object can be allocated. Stricter alignments have larger alignment values. An address that satisfies an alignment requirement also satisfies any weaker alignment requirement. 
+
