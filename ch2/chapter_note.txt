@@ -6,7 +6,10 @@
 - Pointers are types in C 
 - Each object has a storage duration: The time during program execution for which the object exists, has storage, has a constant address, and retains its last-stored value. 
 
+- Type definitions - You can use typedef to declare an alias for an existing type. 
 
+		- typedef unsigned int uint_type -- uint_type becomes an alias for the type unsigned int
+		- typedef signed char schar_type, *schar_p, (*fp)(void) ; -- schar_up = type signed char, *schar_p = signed char *, (*fp)(void) = signed char(*) (void). 
 
 
 
@@ -22,7 +25,7 @@
 	3. Function prototype scope -- Begins and ends within the function declarator.  
 
 	
-	4. Scopes can be nested with inner and outer scopes. The inner scope has access the outer scope but not vice versa.  
+	4. Scopes can be nested with inner and outer scopes. The inner scope can access the outer scope but not vice versa.  
 
 
 
@@ -65,6 +68,49 @@ Object Types in C (specifically Boolean, character, and numerical types: both in
 
 		c. float, double, long double -- All of these are floating point. The C language suports the IEEE standard for floating point arithmetic on most systems. 
 
+		
+	
+	4. Void -- The keyword "void" by itself means "cannot hold any value". It can be used to indicate that a function doesn't return a value or doesn't take an argument. The derived type void * means that the pointer can reference any object.
+
+
+	
+	5. Function Types -- Derived from the return type and the number and type of its parameters. 
+
+			- int f(void) ;    // Function f takes no paramters and returns an int
+			- int *fip() ; 	   // Function fip has no specified parameters and returns a pointer to int
+			- void g(int i, int j);   // function g takes two paramters type int and returns type void
+			- void h(int, int) ;  	  // function h takes two paramters type int and returns type void 
+
+Derived Types
+-------------
+
+	- Derived types are types that are constructde from other types. 
+		- Poitners, Arrays, Type Definitions, Structures, Unions
+
+
+	1. Pointer Types - Pointer types are derived from the function or object type that it points to called the referenced type. 
+		
+			- int *ip;	// Pointer to int
+			- char *cp; 	// Pointer to char
+			- void *vp; 	// Pointer to void	
+
+		- Address of operator & -- Takes the address of an object or function 
+		- Indirection operator * -- Converts a pointer to a type into a value of that type. 
+
+			- int i = 17; 	  // Declare object i of type int and assign value of 17 
+			- int *ip = &i;   // Declare the object ip as a pointer to int and assign it the address of i 
+			- ip = &*ip ; 	  // I have no clue what this does. 
+
+ 	
+	2. Array type - A contiguosly allocated sequence of objects that all have the same element type. They are characterized by their element types and the number of elements in the array. 
+
+			- int ia[11] ;	    // Array of 11 elements of type int identified by ia 	
+			- float *afp[17] ;  // Array of 17 elements of type pointer to float identified by afp 
+
+
+	3. Structure type - Contains sequentially allocated member objects, where each object has its own name and may have a distinct type. This is different from arrays, which must all have the same type. 
+
+
 
 
 Definitions
@@ -84,4 +130,6 @@ Definitions
 - Pass-by-value language - "When you provide an argument to a function, the value of that argument is copied into a distinct variable for use within the function"i
 
 - Alignment - Represents the number of bytes between successive addresses at which a given object can be allocated. Stricter alignments have larger alignment values. An address that satisfies an alignment requirement also satisfies any weaker alignment requirement. 
+
+
 
