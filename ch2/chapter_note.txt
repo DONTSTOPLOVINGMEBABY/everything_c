@@ -106,6 +106,12 @@ Derived Types
 
 			- int ia[11] ;	    // Array of 11 elements of type int identified by ia 	
 			- float *afp[17] ;  // Array of 17 elements of type pointer to float identified by afp 
+		
+		- One way to determine the length of a character array is by taking the sizeof(the_array) / sizeof(the_array[0]) . Since arrays a sequence of objects that have the same type, you divide the total size of the array in bytes divided by the number of bytes that one element of the type takes up in memory. Using the first element of the array (array[0]) makes sure you calculate the size of the right type everytime.  
+			
+			*!* You don't have to do this for a character array. Since the length of each character type isone byte, then you would just be dividing sizeof(the_array) by 1. Therefore, you can simply find the length of the array in bytes by taking sizeof(the_array) . You can also just use strlen... *!* 
+					
+
 
 
 	3. Structure type - Contains sequentially allocated member objects, where each object has its own name and may have a distinct type. This is different from arrays, which must all have the same type. 
