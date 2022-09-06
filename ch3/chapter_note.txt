@@ -1,0 +1,81 @@
+Arithmetic Types*/
+*****************/
+
+General
+------
+- The limits.h header file provides the minimum and maximum representable values for the various integer types. 
+
+
+
+Unsigned Integers
+-----------------
+
+	- Have ranges that start at 0 and the upper bound is greater than that of the signed integer type(since the removal of the signed bit allows for one more significant bit). 
+	- Typically used to count items that have large, nonnegative quantities
+
+
+
+Signed Integers
+---------------
+
+	- Signed integers represent negative, zero, and positive values. 
+	- Each unsigned integer type (excluding _Bool) has a corresponding signed integer type that occupies the same amount of storage. 
+	- C supports three signed integer representation schemes: 
+		1. Sign and Magnitude
+		2. Ones' Complement
+		3. Two's Complement 
+
+
+Integer Constants
+-----------------
+
+	- Integer Constants in C can be represented by decimal constants, octal constants, or hexadecimal constants. 
+
+		- Decimal Constants: 71, -12, -18, 222, 1929 (Normal Deca representation) 
+		- Otcal Constant: 007, 0323, 0932 (Begins with a 0 followed by digits 0-7). 
+		- Hexidecimal Constant: 0xDEADBEEF (Prefix a sequence of decimal digits and or the letters a (or A) through f (or F) with 0x or 0X. 
+			- Hex might be most useful to use when you are attempting to represent a particular bit pattern.
+
+
+
+Floating Point
+--------------
+
+	- A technique that uses scientific notation to encode numbers with a base number and an exponent. 	 - C has three floating types :
+		- float - 1 signed bit, 8 exponent bits, 23 significand bits
+		- double 
+		- long double - 1 signed bit, 11 exponent bits, 52 significand bits
+
+	- Floating Point Constant -- Decimal or Hexidecimal number that represents a signed real numner that cannot be changed. All floating-point constants have a type. 
+
+		- 10.0  /* type double */ 
+		- 10.0F /* type float */
+		- 10.0L	/* type long double */ 
+
+
+Arithmetic Conversions
+----------------------
+
+	- Values can be implicitly or explicitly converted from one arihtmetic type to another using the cast operator to perform explicit conversions. 
+
+		- int si = 5 ;
+		- short ss = 8 ; 
+		- long sl = (long)si ; 
+		- unsigned short us = (unsigned short)(ss +sl) ; 
+
+	- Implicit Conversions -- Occurs automatically in expressions as required. An example would be when operations are performed on mixed types. 
+		
+
+
+
+
+
+Definitions
+-----------
+- Representable value - One the can be represented in the number of bits available to an object of a partiuclar type.
+
+- Wraparound -- Occurs when your perform arithmetic operations in values that are too small. This pertains to unsigned integer representation. 
+
+- Overflow -- Occurs when a signed integer representation results in a value that cannot be represented in the resulting type. Still not completely sure based on what I learned from Constantine's Class.   i
+
+- Safe Conversions - Values that can be converted and accurately represented from one type to another. 

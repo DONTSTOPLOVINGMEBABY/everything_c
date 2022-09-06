@@ -117,6 +117,28 @@ Derived Types
 	3. Structure type - Contains sequentially allocated member objects, where each object has its own name and may have a distinct type. This is different from arrays, which must all have the same type. 
 
 
+	4. Union Types - Unions are similar to structures, except that the memory used by the member objects overlaps. They can contain an object of one type at one time, and an object of a different type at a different time, but never both objects at the same time.
+
+		- struct { int type ; int type2 } ; contains storage for both type and type2, while a union allows the same storage to be used for both its members. 
+
+
+
+Type Qualifiers
+---------------
+
+	1. Const -- Const objects are not modifiable and are place in ROM by the compiler. Any attempt to write over them results in a runtime error. 
+
+	
+	2. Volatile -- The values in these objects may change without the knowledge of the compiler. Using a volatile qualified type lets the compiler know that the value may change, and ensures that every access to the input/output occurs and is not optimized away to hold a previously read or cached value. 
+
+		- Every time the value from a real-time clock is read, it may change, even if the value has not been written to by the C program. 
+		
+
+			- volatile int port ;	// without volatile, the compiler may see this as  
+			- port = port ; 	// a statement that does not thing and delete it.  
+
+	3. Restrict -- Objects indirectly accessed through a pointer frequently cannot be fully optimized because more than one pointer may refer to the same objects.  
+
 
 
 Definitions
@@ -136,6 +158,4 @@ Definitions
 - Pass-by-value language - "When you provide an argument to a function, the value of that argument is copied into a distinct variable for use within the function"i
 
 - Alignment - Represents the number of bytes between successive addresses at which a given object can be allocated. Stricter alignments have larger alignment values. An address that satisfies an alignment requirement also satisfies any weaker alignment requirement. 
-
-
 
