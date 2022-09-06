@@ -34,7 +34,7 @@ void main( int argc, char *argv[]  ) {
 	unsigned long long int function_call = factorial(argument)  ; 
 
 
-	printf("%d! = %llu\n", argument , function_call) ; 
+	printf("%llu! = %llu\n", argument , function_call) ; 
 
 	exit(0) ; 	
  
