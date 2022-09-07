@@ -67,7 +67,21 @@ Arithmetic Conversions
 		
 
 
+Arithmetic Conversion Rules for Promoting Integer Operands
+----------------------------------------------------------
 
+	1. If both operands have the same type, no further conversion is needed.
+	
+	2. If both operands have signed integer types or both have unsigned integer types, the operand with the type that has the lesser integer conversion rank is converted to the type of the operand with greater rank. If one operand has the type int and the other operand has the type long, for example, the operand of type int is converted to an object of type long. 
+
+	3. If the operand that has the unsigned integer type has a rank greater than or equal to the rank of the other operand's type, then the operand with signed integer type is converted to the type of the operand with the unsigned integer type. For example, if one operand has the type signed int, and the other operand has the type unsigned int, the operand of type signed int is converted to an object of type unsigned int. 
+
+	4. If the type of the operand with the signed integer type can represent all of the values of the type of the operand with unsigned integer type, then the operand with unsigned integer type is converted to the type of the operand with signed integer type. For example, if one operand has the type unsigned int and the other operand has the type signed long long, and the signed long long type can represent all the values of the unsigned int type, then the operand of type unsigned int is converted to an object of type signed long long. This is the case for implementations with a 32-bit int type, and a 64-bit long long type, such as x86-32 and x86-64. 
+
+	5. Otherwise, both operands are converted to the unsigned integer type corresponding to the type of the operand with the signed integer type.
+
+
+	 
 
 
 Definitions
