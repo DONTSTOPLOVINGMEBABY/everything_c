@@ -11,6 +11,8 @@
 		- typedef unsigned int uint_type -- uint_type becomes an alias for the type unsigned int
 		- typedef signed char schar_type, *schar_p, (*fp)(void) ; -- schar_up = type signed char, *schar_p = signed char *, (*fp)(void) = signed char(*) (void). 
 
+- Dereferencing a pointer means going to the address that the pointer holds and accessing that particular value. 
+
 
 
 
