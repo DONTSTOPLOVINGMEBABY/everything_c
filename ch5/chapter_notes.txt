@@ -1,0 +1,69 @@
+Control Flow */
+**************/
+
+
+Expression Statements
+---------------------
+	- Expression statement is an optional expression terminated by a semicolon
+
+		- a = 6 ;
+		- c = a + b ; 
+		- ; // null statement, same as pass in Python
+		- ++count ; 
+
+	- Compound statement or block is a list of zero or more statements surrounded by braces. 
+	
+		{
+			static int count = 0 ;
+			c += a ;
+			++count ; 
+		} 
+
+	
+	- Selection statements allow you to conditionally execute a substatement depending on the value of a controlling expression. These types of statements inclucde the switch and if statements. 
+
+		if (name == "Henry")
+			printf("You're an asshole\n") ; 
+
+		if (expression)
+			subexpression 		// subexpression is evaluated if expression != 0 
+
+		
+		if (!quotient) return false ; 	// statement checks quotient to make sure it's not null
+
+
+		other types:
+		
+		if..
+		else..
+
+		
+		if...
+		else if...
+		else...
+
+
+
+Switch Statement
+----------------
+
+
+
+
+
+Do..While Statement
+-------------------
+
+	- Similar to the while statement, except that the evaluation of the controlling expression takes place after each execution of the loop body. The loop body is therefore gauranteed to execute once before the condition is tested. 
+
+
+
+
+
+
+
+
+
+
+
+	
