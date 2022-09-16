@@ -1,0 +1,72 @@
+Dynamically Allocated Memory */
+******************************/ 
+
+
+Storage Duration
+----------------
+
+	- Objects occupy storage which might either be RAM, ROM, or registers. 
+	
+	- Objects of automatic storage duration are declared within a block or as a function parameter. The lifetime of these objects begin with the block that they're declared in begins execution and ends when each block ends. If the block is entered recursively, a new object is created each time with its own storage. 
+	
+	- Objects declared in file scope have static storage duration and the lifetime of the object is the entire execution of the program, and their stored value is initialized prior to program startup.
+		- Objects not in file scope can be given static storage duration by the use of keyword static (similar to Global in python?) 
+
+
+--------------------------------
+| The Heap and Memory Managers | 
+--------------------------------
+
+	- Allocated Storage Duration -- Memory that is dynamically allocated has allocated storage duration. The lifetime of an allocated object extends from the allocation until the deallocation. Dynamically allocated memory is allocated from the heap. 
+	
+	- Heap -- One or more large, subdividable blocks of memory that are managed by memory managers. 
+
+	- Memory managers -- Libraries that manage the heap for you by providing implementation of the standard memory management functions. The memory manager will request one or more blocks of memory from the operation system and then allocate this memory to the client process when it invokes a memory allocation function.
+
+	- Fragmentation -- Occurs when memory is allocated and deallocated, resulting in many small blocks of memory but no remaining large blocks. As a result, larger allocation can fail even though the total amount of free memory is sufficient for the allocation. 
+
+
+--------------------------------
+When to Use Dyn Aloc. Memory
+--------------------------------
+
+	- You are suppose to use dynamically allocated memory when the exact storage requirements for a program are unkown before runtime. 
+
+	- Dynamically allocated memory is less efficient than static or automatic memory because the manager needs to find appropriately sized blocks of memory in the runtime heap, and then the caller must explicitly free those blocks when no longer needed. 
+
+	- Memory Leaks -- Occur when dynamically allocated memory that's no longer needed isn't returned to the memory manager. 
+
+
+
+
+--------------------------------
+Memory Management Functions
+--------------------------------
+	
+	- C Functions for allocating and deallocating memory
+
+		- Malloc
+		- Aligned_alloc
+		- calloc 
+		- Realloc
+		- free (deallocates memory) 
+		
+
+
+--------------------------------
+	    Malloc
+--------------------------------
+
+	- Allocates space for an object of a specified size whose initial value is indeterminate. 
+
+
+
+
+	
+
+
+
+
+
+
+

@@ -2,27 +2,61 @@
 #include <limits.h>
 
 
+void firstexample(void) ; 
+
+void io_example(void) ;  
+
 int main()
 {
 
-
-	//How do you check for integer overflow? 
-
-
-	unsigned int integer1 = UINT_MAX ; 
-       	unsigned int integer2 = UINT_MAX ; 
-
-	unsigned int integer3 = integer1 + integer2  ; 
+	firstexample() ; 
+	
+	io_example() ; 
 
 
-	printf("%u\n", integer3) ;	
+	return 0 ; 
+}
+
+
+
+
+
+void firstexample(void) {
+
 
 	int do_counter ;
 	int while_counter ; 
 
 	int n = 0 ; 
 
+	while (n != 0) {
+
+		puts("should not execute") ;
+		
+	}
+
+
+	
+
+	do {
+		puts("Should execute one") ; 
+	
+	} while (n != 0) ; 	
+
+
+} 
+
+
+void io_example(void) {
+
+	int count; float quant ; char units[21], item[21] ; 
+	do {
+		count = fscanf(stdin, "%f%20s of %20s", &quant, units, item) ; 
+		fscanf(stdin, "%*[^\n]");
+	} while (!feof(stdin) && !ferror(stdin)) ; 
 
 }
+
+
 
 

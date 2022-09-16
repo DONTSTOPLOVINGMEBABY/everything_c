@@ -56,14 +56,28 @@ Do..While Statement
 
 	- Similar to the while statement, except that the evaluation of the controlling expression takes place after each execution of the loop body. The loop body is therefore gauranteed to execute once before the condition is tested. 
 
+	- Apparently it's popular in io streams when you need to get a piece of information before you start testing it against some expression. A do while loop can execute once even if condition is not initially met, while a while loop will may not execute at all if the condition is never initially met. 
 
 
 
 
+----------------------------------------
+| Different Types of Control Flow in C |
+----------------------------------------
 
 
+1. Decision Making Statements:
+	- If, if-else
+	
 
+2. Selection Statements
+	- Switch-case
 
+3. Iteration Statements
+	- for, while, do-while
 
+4. Jump Statements
+	- break, continue, goto
+	
 
 	
