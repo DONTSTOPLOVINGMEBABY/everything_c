@@ -21,7 +21,7 @@ Storage Duration
 	
 	- Heap -- One or more large, subdividable blocks of memory that are managed by memory managers. 
 
-	- Memory managers -- Libraries that manage the heap for you by providing implementation of the standard memory management functions. The memory manager will request one or more blocks of memory from the operation system and then allocate this memory to the client process when it invokes a memory allocation function.
+	- Memory managers -- Libraries that manage the heap for you by providing implementation of the standard memory management functions. The memory manager will request one or more blocks of memory from the operating system and then allocate this memory to the client process when it invokes a memory allocation function.
 
 	- Fragmentation -- Occurs when memory is allocated and deallocated, resulting in many small blocks of memory but no remaining large blocks. As a result, larger allocation can fail even though the total amount of free memory is sufficient for the allocation. 
 
@@ -59,13 +59,47 @@ Memory Management Functions
 
 	- Allocates space for an object of a specified size whose initial value is indeterminate. 
 
+	- Malloc returns either a null pointer to indicate an error, or a pointer to the allocated space. 
+
+
+	- void * p = malloc(size) ; 
+	- char *p = malloc(size) ; 
+
+		- The object referenced by p has no type until an object is copied into this storage. Once this occurs, the object has the effective type of the last object copied into this storage, which imprints the type onto the allocated object. 
+
+		void *p = malloc(size) ; 
+		widget w = {"abc", 9, 3.2} ; 
+		memcpy(p, &w, sizeof(widget)) ; 
+		
 
 
 
+--------------------------------
+	aligned_aloc
+--------------------------------
+
+	- void *aligned_alloc(size_t alignment, size_t size) ; 
+
+	- Similar to the malloc function, except that it requires you to define an alignment as well as a size for the allocated object. 
 	
+	- You typically use it if you need to request a larger power of two. 
 
 
 
+
+
+--------------------------------
+	    calloc
+--------------------------------
+
+
+	- void *calloc(size_t nmemb, size_t size) 
+	
+	- The calloc function allocates storage for an array of nmemb objects, each of whose size is size bytes. 
+
+	- The function will initialize storage to all zero-valued bytes. You can use calloc to assign storage for a single object, which can be thought of as an array of one element. 
+
+	- Will return 
 
 
 
