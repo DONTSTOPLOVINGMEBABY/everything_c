@@ -1,0 +1,18 @@
+Streams
+-------
+
+	- A stream is a uniform abstraction for communicating with files and devices that consume or produce sequential data such as sockets, keyboards, USB ports, and printers. 
+
+
+	- A FILE object holds the internal state information for the connection to the associated file, including the file position indicator, buffering information, an error indicator, and an end-of-file indicator. 
+
+	- C Standard Library functions operate on objects of type FILE * (a pointer to the FILE type). As a result, streams are frequently referred to as file pointers. 
+
+
+
+Buffering
+---------
+
+	
+
+	
