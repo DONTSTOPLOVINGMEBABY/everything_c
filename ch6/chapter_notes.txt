@@ -62,6 +62,7 @@ Memory Management Functions
 	- Malloc returns either a null pointer to indicate an error, or a pointer to the allocated space. 
 
 
+<<<<<<< HEAD
 	- void * p = malloc(size) ; 
 	- char *p = malloc(size) ; 
 
@@ -84,6 +85,16 @@ Memory Management Functions
 	
 	- You typically use it if you need to request a larger power of two. 
 
+=======
+--------------------------------
+	Malloc
+--------------------------------
+
+    
+	- void *realloc(void *ptr, size_t size) ;
+ 
+	- realloc deallocates the old object pointed to by ptr and returns a pointer to new object that has the size specified by size. The contents of the new object is identical to that of the old object prior to deallocation, up to the lesser of the new and old sizes. Any bytes in the new object beyond the size of the old object have indeterminate values.  
+>>>>>>> 53505304e17b18861e85628892d597b1b586a0d9
 
 
 
