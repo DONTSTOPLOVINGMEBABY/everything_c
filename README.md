@@ -1,6 +1,6 @@
 <h2>everything_c Repository</h2>
 
-<p>This repository houses random code/projects that I've written to experiment and build experience with the C programming language. I occassionally write some Python here and there when I'm looking to solve a problem quickly and want access to clean high-level functions. </p>
+<p>This repository houses random code/projects that I've written to experiment and build experience with the C programming language. I occassionally write some Python here and there when I'm looking to solve a problem quickly and want access to a (sometimes) more friendly syntax. </p>
 
 <h3>Effective C: An Introduction to Modern C Programming by Robert Seacord</h3>
 
