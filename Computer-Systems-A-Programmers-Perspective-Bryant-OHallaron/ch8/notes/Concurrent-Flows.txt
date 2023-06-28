@@ -1,0 +1,16 @@
+Logical flows take many different forms in computer systems. Exception handlers, processes, signal handlers, threads, and Java processes are all examples of logical flows. 
+
+
+Concurrent flow -- A logical flow whose execution overlaps with another flow is called a concurrent flow, and the two flows are said to run concurrently because the last instruction of B executes before the first instruction of C. 
+
+
+Concurrency -- The general phenomenon of multiple flows executing concurrently is known as concurrency. 
+
+
+Multitasking -- The noting of a process taking turns with other processes. 
+
+
+Time slice -- Each time period that a process executes a portion of its flow is called a time slice. 
+
+
+Parallel Flows -- If two flows are funning concurrently on different processor cores or computers, then we say that they are parallel flows, that they are running in parallel, and have parallel execution. 
