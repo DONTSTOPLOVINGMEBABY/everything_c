@@ -1,6 +1,0 @@
-
-Sentence with a period. 
-
-Sentence with a comma, 
-
-Sentence with an exclamation point! 
