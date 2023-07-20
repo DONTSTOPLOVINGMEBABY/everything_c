@@ -1,3 +1,0 @@
-- Processes provide each program with the illusion that it has exclusive use of the processor. 
-
-Logical Control Flow -- If you were to debug a program and single step through its execution, we would observe a series of program counter (PC) values that corresponded exclusively to instructions contained in our program's object file or in shared objects linked into our program. THIS SEQUENCE OF PC (PROGRAM COUNTER) VALUES IS KNOWN AS A LOGICAL CONTROL FLOW, OR SIMPLY LOGICAL FLOW. 
